@@ -1255,7 +1255,7 @@ const run = async (
       rows:ganttRows,
       from: new Date(${JSON.stringify(first_start)}),
       to: new Date(${JSON.stringify(last_end)}),  
-      dateAdapter: new MomentSvelteGanttDateAdapter(moment.lang(lang)),    
+      dateAdapter: new MomentSvelteGanttDateAdapter(moment.lang(${lang})),    
       rowHeight: ${row_height || 52},
       rowPadding: ${row_padding || 6},
       fitWidth: true,
