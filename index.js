@@ -31,6 +31,7 @@ const {
 const { features, getState } = require("@saltcorn/data/db/state");
 
 const moment = require("moment"); // require
+
 const { calcSpanProps, adjustTzOffset } = require("./common");
 
 const public_user_role = features?.public_user_role || 10;
@@ -1443,9 +1444,9 @@ module.exports = {
           }/index.iife.js`
         : "/plugins/public/svelte-gantt/index.iife.js",
     },
-    {
+    /*{
       script: "/plugins/public/svelte-gantt/moment.min.js",
-    },
+    },*/
     {
       script: "/plugins/public/svelte-gantt/moment-with-locales.min.js",
     },
