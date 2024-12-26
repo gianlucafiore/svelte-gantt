@@ -119,3 +119,5 @@ const locale = {
       },
   }
 }
+
+module.exports = {locale}
