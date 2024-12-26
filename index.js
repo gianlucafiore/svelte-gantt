@@ -1116,7 +1116,7 @@ const run = async (
     }
   }
   const rowh = row_height || 52;
-  moment.locale(lang);
+  moment = moment.locale(lang);
   return (
     resource_preample +
     (dependency_table && dependency_from_field && dependency_to_field
