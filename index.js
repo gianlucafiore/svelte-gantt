@@ -96,6 +96,13 @@ const configuration_workflow = () =>
           return new Form({
             fields: [
               {
+                name:'lang',
+                label:'Language',
+                type:'String',
+                sublabel:'languages available in MomentJS() Examples: es, pt-br, en, fr, ru',
+                required: true
+              },
+              {
                 name: "title_field",
                 label: "Title field",
                 type: "String",
@@ -381,7 +388,7 @@ const configuration_workflow = () =>
               .map((f) => f.name);
           }
           return new Form({
-            fields: [
+            fields: [ 
               {
                 name: "row_order_field",
                 label: "Row order field",
@@ -481,6 +488,7 @@ const run = async (
   table_id,
   viewname,
   {
+    lang,
     start_field,
     duration_field,
     duration_units,
@@ -1247,7 +1255,7 @@ const run = async (
       rows:ganttRows,
       from: new Date(${JSON.stringify(first_start)}),
       to: new Date(${JSON.stringify(last_end)}),  
-      dateAdapter: new MomentSvelteGanttDateAdapter(moment),    
+      dateAdapter: new MomentSvelteGanttDateAdapter(moment.lang(lang)),    
       rowHeight: ${row_height || 52},
       rowPadding: ${row_padding || 6},
       fitWidth: true,
