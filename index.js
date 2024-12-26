@@ -344,6 +344,7 @@ const configuration_workflow = () =>
       {
         name: "Row order",
         form: async (context) => {
+          
           const table = await Table.findOne({ id: context.table_id });
           const fields = await table.getFields();
           const row_field = fields.find((f) => f.name === context.row_field);
@@ -531,6 +532,7 @@ const run = async (
   state,
   extraArgs
 ) => {
+  moment.locale(lang);
   const table = await Table.findOne({ id: table_id });
   const fields = await table.getFields();
   const row_fld = fields.find((f) => f.name === row_field);
@@ -1116,7 +1118,7 @@ const run = async (
     }
   }
   const rowh = row_height || 52;
-  moment = moment.locale(lang);
+  
   return (
     resource_preample +
     (dependency_table && dependency_from_field && dependency_to_field
