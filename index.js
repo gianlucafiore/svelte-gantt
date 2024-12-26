@@ -1446,6 +1446,9 @@ module.exports = {
     {
       script: "/plugins/public/svelte-gantt/moment.min.js",
     },
+    {
+      script: "/plugins/public/svelte-gantt/moment-with-locales.min.js",
+    },
   ],
   sc_plugin_api_version: 1,
   plugin_name: "svelte-gantt",
