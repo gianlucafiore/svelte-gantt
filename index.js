@@ -7,6 +7,7 @@ const {
   eval_expression,
   freeVariables,
 } = require("@saltcorn/data/models/expression");
+const {es} = require('moment')
 
 const {
   text,
@@ -1448,7 +1449,7 @@ module.exports = {
     //   script: "/plugins/public/svelte-gantt/moment.min.js",
     // },
     {
-      script: "/plugins/public/svelte-gantt/moment-with-locales.min"
+      script: "https://momentjs.com/downloads/moment-with-locales.js"
     }
   ],
   sc_plugin_api_version: 1,
