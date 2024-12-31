@@ -1251,7 +1251,7 @@ const run = async (
         focused_tasks
       )}.map(t=>{t.from = new Date(t.from); t.to = new Date(t.to); return t});
       //console.log(tasks)
-      
+      moment.locale('${lang}')
       const ganttRows= ${JSON.stringify(focused_chart_rows)};
       const gantt = new SvelteGantt({ 
     target: document.getElementById('${divid}'), 
