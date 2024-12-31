@@ -37,7 +37,7 @@ const calcSpanProps = (spanMonths, spanDays) =>
         headers: [
           { unit: "week", format: "MM/YYYY", offset: 1 },
 
-          { unit: "day", format: "dd DD", offset: 1 },
+          { unit: "day", format: "DD", offset: 1 },
         ],
       }
     : spanDays > 8
