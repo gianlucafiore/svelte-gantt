@@ -1444,9 +1444,12 @@ module.exports = {
           }/index.iife.js`
         : "/plugins/public/svelte-gantt/index.iife.js",
     },
+    // {
+    //   script: "/plugins/public/svelte-gantt/moment.min.js",
+    // },
     {
-      script: "/plugins/public/svelte-gantt/moment.min.js",
-    },
+      script: "/plugins/public/svelte-gantt/moment-with-locales.min"
+    }
   ],
   sc_plugin_api_version: 1,
   plugin_name: "svelte-gantt",
